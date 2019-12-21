@@ -41,9 +41,8 @@ public:
 		pinMode(m_pin, INPUT_PULLUP);
 	}
 
-	// Poll button state given the current millisecond clock.
-	// Typically called from timer ISR.
-	void poll(uint32_t ms_clk)
+	// Poll button state. Typically called from timer ISR.
+	void poll()
 	{
 		uint8_t v = *m_port & m_bit;
 		bool was_pressed = m_state != 0;

@@ -8,11 +8,10 @@
 #define BT_PIN 4
 
 Btn g_btn(BT_PIN);
-uint32_t g_clk;
 
 ISR(TIMER1_OVF_vect)
 {
-  g_btn.poll(g_clk++);
+  g_btn.poll();
 }
 
 void timer_init(unsigned us_period)
