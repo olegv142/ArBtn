@@ -29,7 +29,7 @@ void setup() {
 }
 
 void loop() {
-  switch(g_btn.get_events()) {
+  switch(g_btn.get_event()) {
     case bt_released:
       Serial.println("released");
       break;

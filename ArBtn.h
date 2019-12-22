@@ -72,7 +72,7 @@ public:
 	}
 
 	// Returns last not yet reported event. The particular event will be returned only once.
-	bt_event_t get_events()
+	bt_event_t get_event()
 	{
 		if (m_get_epoch == m_evt_epoch)
 			return bt_none;
