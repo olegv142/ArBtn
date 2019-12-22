@@ -66,7 +66,12 @@ public:
 		}
 	}
 
-	// Query collected events bitmask. Collected events are cleared upon return.
+	// Returns true if the button is currently in pressed state.
+	bool is_pressed() const {
+		return m_state != 0;
+	}
+
+	// Returns last not yet reported event. The particular event will be returned only once.
 	bt_event_t get_events()
 	{
 		if (m_get_epoch == m_evt_epoch)
