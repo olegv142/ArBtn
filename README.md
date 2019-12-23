@@ -1,5 +1,5 @@
 # ArBtn
-Arduino button class with denouncer and long press detection capability.
+Arduino button class with debouncer and long press detection capability.
 
 Example demonstrates how to use it with Timer1 interrupts.
 
